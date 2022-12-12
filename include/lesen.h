@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <round.h>
 
 using namespace std; 
 
@@ -45,8 +46,8 @@ void lesen(string path, int anzahl) {
         cout << koor.x << " " << koor.y << endl; 
     }
 
-    cout << "Der Durchschnitt der X-Werte ist: " << round(mediumx * 10 / anzahl) / 10 << endl; 
-    cout << "Der Durchschnitt der Y-Werte ist: " << round(mediumy * 10 / anzahl) / 10 << endl; 
+    cout << "Der Durchschnitt der X-Werte ist: " << math::rounds(mediumx, 1) << endl; 
+    cout << "Der Durchschnitt der Y-Werte ist: " << math::rounds(mediumy, 1) << endl; 
 
 }
 
